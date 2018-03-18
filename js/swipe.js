@@ -25,8 +25,12 @@ $(function () {
                     changePage();
                 }
                 if(direction === 'down' && distance >= 100) {
-                    if (activePage > 0) activePage--;
-                    changePage();
+                    if (activePage > 0)  {
+                        activePage--;
+                        changePage();
+                    } else {
+                        location.reload();
+                    }
                 }
                 if(direction === 'right' && distance >= 100) {
                     if (activePage > 0) activePage--;
